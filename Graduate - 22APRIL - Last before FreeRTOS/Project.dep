@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>1132662321</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\MCAL\RCC.h</file>
+            <file>$PROJ_DIR$\MCAL\I2C.h</file>
+            <file>$PROJ_DIR$\Device\misc.c</file>
+            <file>$PROJ_DIR$\HAL\Temp_STDS75.h</file>
+            <file>$PROJ_DIR$\HAL\GYRO.c</file>
+            <file>$PROJ_DIR$\HAL\MAGNETO.c</file>
+            <file>$PROJ_DIR$\HAL\MRAM.c</file>
+            <file>$PROJ_DIR$\HAL\GYRO_MPU.h</file>
+            <file>$PROJ_DIR$\Device\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\HAL\Gyroscope.h</file>
+            <file>$PROJ_DIR$\Device\core_cmSimd.h</file>
+            <file>$PROJ_DIR$\Device\misc.h</file>
+            <file>$PROJ_DIR$\Device\core_cmInstr.h</file>
+            <file>$PROJ_DIR$\Device\stm32f4xx.h</file>
+            <file>$PROJ_DIR$\Device\system_stm32f4xx.h</file>
+            <file>$PROJ_DIR$\HAL\MAGNETO_LIS2.h</file>
+            <file>$PROJ_DIR$\HAL\magnetometer.h</file>
+            <file>$PROJ_DIR$\HAL\Temp_STDS75.c</file>
+            <file>$PROJ_DIR$\HAL\FROM.h</file>
+            <file>$PROJ_DIR$\Device\stm32f4xx_it.c</file>
+            <file>$PROJ_DIR$\Device\core_cm4.h</file>
+            <file>$PROJ_DIR$\HAL\FROM.c</file>
+            <file>$PROJ_DIR$\Device\stm32f4xx_it.h</file>
+            <file>$PROJ_DIR$\MCAL\ADC.h</file>
+            <file>$PROJ_DIR$\Device\system_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\MCAL\FLASH.h</file>
+            <file>$PROJ_DIR$\MCAL\GPIO.h</file>
+            <file>$PROJ_DIR$\HAL\MRAM.h</file>
+            <file>$PROJ_DIR$\APP\APP.h</file>
+            <file>$PROJ_DIR$\APP\APP.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\sysmem.o</file>
+            <file>$PROJ_DIR$\HAL\SSP_funcs.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\MRAM.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\GYRO.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f4xx.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\USART.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\FLASH.xcl</file>
+            <file>$PROJ_DIR$\Device\sysmem.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\MRAM.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\APP.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\tm_stm32f4_general.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\USART.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSP.o</file>
+            <file>$PROJ_DIR$\Device\syscalls.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\misc.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\RCC.xcl</file>
+            <file>$PROJ_DIR$\HAL\SSP.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\syscalls.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_it.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\MPU_testc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\sysmem.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_stm32f40_41xxx.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\MPU_testc.xcl</file>
+            <file>$PROJ_DIR$\HAL\GYRO_MPU.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\FROM.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Temp_STDS75.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\Project.pbd</file>
+            <file>$PROJ_DIR$\Debug\Obj\misc.o</file>
+            <file>$PROJ_DIR$\startup_stm32f407vgtx.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\GPIO.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\ADC.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_it.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2C.xcl</file>
+            <file>$PROJ_DIR$\HAL\FIFO.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\GYRO_MPU.o</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\MAGNETO.o</file>
+            <file>$PROJ_DIR$\Device\tm_stm32f4_general.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\SPI.o</file>
+            <file>$PROJ_DIR$\Debug\List\Project.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\MCAL\USART.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\GYRO_MPU.xcl</file>
+            <file>$PROJ_DIR$\Services\FIFO.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\MPU_test.xcl</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\Services\SSP.h</file>
+            <file>$PROJ_DIR$\Services\SSP_funcs.h</file>
+            <file>$PROJ_DIR$\MCAL\RCC.c</file>
+            <file>$PROJ_DIR$\Services\SSP_funcs.c</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\MCAL\GPIO.c</file>
+            <file>$PROJ_DIR$\MCAL\TMR.h</file>
+            <file>$PROJ_DIR$\MCAL\ADC.c</file>
+            <file>$PROJ_DIR$\MCAL\SPI.c</file>
+            <file>$PROJ_DIR$\MCAL\I2C.c</file>
+            <file>$PROJ_DIR$\MCAL\TMR.c</file>
+            <file>$PROJ_DIR$\MCAL\USART.h</file>
+            <file>$PROJ_DIR$\MCAL\FLASH.c</file>
+            <file>$PROJ_DIR$\main.h</file>
+            <file>$PROJ_DIR$\Services\SSP.c</file>
+            <file>$PROJ_DIR$\startup_stm32f40_41xxx.s</file>
+            <file>$PROJ_DIR$\MCAL\SPI.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\FIFO.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\GYRO.xcl</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\FROM.xcl</file>
+            <file>$PROJ_DIR$\Services\FIFO.c</file>
+            <file>$PROJ_DIR$\HAL\FIFO.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Temp_STDS75.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\errno.h</file>
+            <file>$PROJ_DIR$\Device\tm_stm32f4_general.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_stm32f407vgtx.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\MAGNETO.xcl</file>
+            <file>$TOOLKIT_DIR$\config\linker\ST\stm32f407xG.icf</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\SPI.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f4xx.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\FLASH.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\APP\MPU_testc.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\APP.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\tm_stm32f4_general.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\TMR.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSP_funcs.o</file>
+            <file>$PROJ_DIR$\HAL\SSP_funcs.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\Project.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSP.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\TMR.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\ADC.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\RCC.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\GPIO.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2C.o</file>
+            <file>$PROJ_DIR$\APP\MPU_test.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\FIFO.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSP_funcs.xcl</file>
+            <file>$PROJ_DIR$\HAL\SSP.c</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 124 73</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Device\misc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 60</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 45</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 11 13 20 105 64 34 111 120 115 12 53 132 8 10 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\GYRO.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 98</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 9 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 16 15 3 27 18 80 77 81 7</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\MAGNETO.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 70</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 109</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 9 7 16 15 3 27 18 80 77 81</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\MRAM.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 39</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 9 7 16 15 3 18 80 77 81</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\Temp_STDS75.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 104</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 58</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 3 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 9 7 16 15 27 18 80 77 81</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Device\stm32f4xx_it.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 65</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 22 13 20 105 64 34 111 120 115 12 53 132 8 10 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\FROM.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 101</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 9 7 16 15 3 27 80 77 81</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Device\system_stm32f4xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 113</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 35</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 13 20 105 64 34 111 120 115 12 53 132 8 10 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\APP.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 40</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 117</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 28 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 9 7 16 15 3 27 18 80 77 81</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\SSP_funcs.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 122</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 134</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 123 9 7</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Device\sysmem.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 52</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 106 64 34 111 120 115 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Device\syscalls.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 48</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\GYRO_MPU.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 76</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_stm32f407vgtx.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 108</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MCAL\USART.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 42</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 36</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 91 13 20 105 64 34 111 120 115 12 53 132 8 10 14 93 0 26 1 23 86 96 25 9 7 16 15 3 27 18 80 77 81</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MCAL\RCC.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 128</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 46</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 13 20 105 64 34 111 120 115 12 53 132 8 10 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Services\SSP_funcs.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 122</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 134</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 9 7 16 15 3 27 18 80 77 81</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 50</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 74</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 100</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 9 7 16 15 3 27 18 80 77 81 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MCAL\GPIO.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 26 13 20 105 64 34 111 120 115 12 53 132 8 10 14 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MCAL\ADC.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 127</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 63</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 23 13 20 105 64 34 111 120 115 12 53 132 8 10 14 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MCAL\SPI.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 72</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 112</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 96 26 13 20 105 64 34 111 120 115 12 53 132 8 10 14 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MCAL\I2C.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 130</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 66</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 1 13 20 105 64 34 111 120 115 12 53 132 8 10 14 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MCAL\TMR.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 126</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 119</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 86 13 20 105 64 34 111 120 115 12 53 132 8 10 14 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MCAL\FLASH.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 25 13 20 105 64 34 111 120 115 12 53 132 8 10 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Services\SSP.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 125</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 9 7 16 15 3 27 18 80 77 81</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_stm32f40_41xxx.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 54</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Services\FIFO.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 97</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 96 25 9 7 16 15 3 27 18 80 77 81</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\FIFO.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 97</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 47</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Device\tm_stm32f4_general.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 118</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 41</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 71 13 20 105 64 34 111 120 115 12 53 132 8 10 14 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\MPU_testc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 51</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 55</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\Project.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 73</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 110 127 40 97 114 57 129 33 130 70 50 60 39 128 72 43 122 54 65 113 104 126 42 121 99 79 69</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\MPU_test.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 78</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\SSP.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 125</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47 93 105 64 34 111 120 115 13 20 12 53 132 8 10 14 0 26 91 1 23 86 67 123</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\Device\sysmem.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\Device\syscalls.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
