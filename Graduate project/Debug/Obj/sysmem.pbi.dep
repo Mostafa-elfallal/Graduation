@@ -1,0 +1,4 @@
+sysmem.pbi: F:\IAR\arm\inc\c\ycheck.h F:\IAR\arm\inc\c\stdint.h \
+  F:\IAR\arm\inc\c\DLib_Product.h F:\IAR\arm\inc\c\DLib_Defaults.h \
+  F:\IAR\arm\inc\c\yvals.h F:\IAR\arm\inc\c\errno.h \
+  D:\projects\ARM\ projects\iar\Graduate\Device\sysmem.c

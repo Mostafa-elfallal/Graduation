@@ -1,0 +1,33 @@
+FIFO.pbi: D:\Workspace\IAR\Graduate\ project\main.h \
+  D:\Workspace\IAR\Graduate\ project\Services\SSP_funcs.h \
+  D:\Workspace\IAR\Graduate\ project\Services\FIFO.h \
+  D:\Workspace\IAR\Graduate\ project\Services\SSP.h \
+  D:\Workspace\IAR\Graduate\ project\HAL\FROM.h \
+  D:\Workspace\IAR\Graduate\ project\HAL\MRAM.h \
+  D:\Workspace\IAR\Graduate\ project\HAL\Temp_STDS75.h \
+  D:\Workspace\IAR\Graduate\ project\HAL\MAGNETO_LIS2.h \
+  D:\Workspace\IAR\Graduate\ project\HAL\magnetometer.h \
+  D:\Workspace\IAR\Graduate\ project\HAL\GYRO_MPU.h \
+  D:\Workspace\IAR\Graduate\ project\HAL\Gyroscope.h \
+  D:\Workspace\IAR\Graduate\ project\MCAL\FLASH.h \
+  D:\Workspace\IAR\Graduate\ project\MCAL\SPI.h \
+  D:\Workspace\IAR\Graduate\ project\MCAL\TMR.h \
+  D:\Workspace\IAR\Graduate\ project\MCAL\ADC.h \
+  D:\Workspace\IAR\Graduate\ project\MCAL\I2C.h \
+  D:\Workspace\IAR\Graduate\ project\MCAL\USART.h \
+  D:\Workspace\IAR\Graduate\ project\MCAL\GPIO.h \
+  D:\Workspace\IAR\Graduate\ project\MCAL\RCC.h \
+  D:\Workspace\IAR\Graduate\ project\Device\system_stm32f4xx.h \
+  D:\Workspace\IAR\Graduate\ project\Device\core_cmSimd.h \
+  D:\Workspace\IAR\Graduate\ project\Device\core_cmFunc.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iccarm_builtin.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\cmsis_iar.h \
+  D:\Workspace\IAR\Graduate\ project\Device\core_cmInstr.h \
+  D:\Workspace\IAR\Graduate\ project\Device\core_cm4.h \
+  D:\Workspace\IAR\Graduate\ project\Device\stm32f4xx.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
+  D:\Workspace\IAR\Graduate\ project\Services\FIFO.c
