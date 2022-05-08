@@ -49,6 +49,7 @@ build RCC.pbi : index RCC.xcl
 build SPI.pbi : index SPI.xcl
 build TMR.pbi : index TMR.xcl
 build USART.pbi : index USART.xcl
+build Latch.pbi : index Latch.xcl
 build MemoryLayout.pbi : index MemoryLayout.xcl
 build SSP.pbi : index SSP.xcl
 build SSP_funcs.pbi : index SSP_funcs.xcl
@@ -57,8 +58,8 @@ build Project_part0.pbi : link APP.pbi Frame_Provider_Task.pbi Log_Saver_Task.pb
 build Project_part1.pbi : link Update_Telmetry_Task.pbi misc.pbi system_stm32f4xx.pbi event_groups.pbi heap_4.pbi list.pbi
 build Project_part2.pbi : link port.pbi queue.pbi tasks.pbi timers.pbi FROM.pbi GYRO.pbi
 build Project_part3.pbi : link MAGNETO.pbi MRAM.pbi Temp_STDS75.pbi ADC.pbi FLASH.pbi GPIO.pbi
-build Project_part4.pbi : link I2C.pbi RCC.pbi SPI.pbi TMR.pbi USART.pbi MemoryLayout.pbi
-build Project_part5.pbi : link SSP.pbi SSP_funcs.pbi main.pbi
+build Project_part4.pbi : link I2C.pbi RCC.pbi SPI.pbi TMR.pbi USART.pbi Latch.pbi
+build Project_part5.pbi : link MemoryLayout.pbi SSP.pbi SSP_funcs.pbi main.pbi
 build Project.pbd : link Project_part0.pbi Project_part1.pbi Project_part2.pbi Project_part3.pbi Project_part4.pbi Project_part5.pbi
 build Project.pbw : browsedata Project.pbd
 

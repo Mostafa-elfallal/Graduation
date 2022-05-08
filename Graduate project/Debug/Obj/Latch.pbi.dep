@@ -1,5 +1,5 @@
-Update_Telmetry_Task.pbi: D:\Workspace\IAR\Graduate\ project\main.h \
-  D:\Workspace\IAR\Graduate\ project\Services\Latch.h \
+Latch.pbi: D:\Workspace\IAR\Graduate\ project\Services\Latch.h \
+  D:\Workspace\IAR\Graduate\ project\main.h \
   D:\Workspace\IAR\Graduate\ project\Services\MemoryLayout.h \
   D:\Workspace\IAR\Graduate\ project\Services\SSP_funcs.h \
   D:\Workspace\IAR\Graduate\ project\Services\SSP.h \
@@ -44,5 +44,4 @@ Update_Telmetry_Task.pbi: D:\Workspace\IAR\Graduate\ project\main.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
-  D:\Workspace\IAR\Graduate\ project\APP\APP.h \
-  D:\Workspace\IAR\Graduate\ project\APP\Update_Telmetry_Task.c
+  D:\Workspace\IAR\Graduate\ project\Services\Latch.c

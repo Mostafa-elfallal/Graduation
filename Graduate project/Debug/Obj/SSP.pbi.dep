@@ -14,6 +14,24 @@ SSP.pbi: D:\Workspace\IAR\Graduate\ project\Services\SSP.c \
   D:\Workspace\IAR\Graduate\ project\Device\core_cmFunc.h \
   D:\Workspace\IAR\Graduate\ project\Device\core_cmSimd.h \
   D:\Workspace\IAR\Graduate\ project\Device/system_stm32f4xx.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS\FreeRTOS.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stddef.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ysizet.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS/FreeRTOSConfig.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS/projdefs.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS/portable.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS/deprecated_definitions.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS/portmacro.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\intrinsics.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iccarm_builtin.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iar_intrinsics_common.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS/mpu_wrappers.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS\task.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS/list.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS\queue.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS/task.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS\semphr.h \
+  D:\Workspace\IAR\Graduate\ project\FREERTOS/queue.h \
   D:\Workspace\IAR\Graduate\ project\MCAL\RCC.h \
   D:\Workspace\IAR\Graduate\ project\MCAL\GPIO.h \
   D:\Workspace\IAR\Graduate\ project\MCAL\USART.h \
@@ -32,21 +50,4 @@ SSP.pbi: D:\Workspace\IAR\Graduate\ project\Services\SSP.c \
   D:\Workspace\IAR\Graduate\ project\Services\SSP.h \
   D:\Workspace\IAR\Graduate\ project\Services\SSP_funcs.h \
   D:\Workspace\IAR\Graduate\ project\Services\MemoryLayout.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS\FreeRTOS.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stddef.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ysizet.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS/FreeRTOSConfig.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS/projdefs.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS/portable.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS/deprecated_definitions.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS/portmacro.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\intrinsics.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iccarm_builtin.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iar_intrinsics_common.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS/mpu_wrappers.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS\task.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS/list.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS\queue.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS/task.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS\semphr.h \
-  D:\Workspace\IAR\Graduate\ project\FREERTOS/queue.h
+  D:\Workspace\IAR\Graduate\ project\Services\Latch.h

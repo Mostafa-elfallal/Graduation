@@ -9,6 +9,13 @@ void vReceiver_Task( void * pvParameters )
 	for(;;)
 	{
 		xQueueReceive( ReceivedFramesQueue,&pFrame,portMAX_DELAY);
+		xSemaphoreTake(latchvar.LatchMutex,portMAX_DELAY);
+		if(Latch_isLatched())
+		{
+			Latch_frame( pFrame);
+			Latch_changeSetting(1);
+		}
+		xSemaphoreGive(latchvar.LatchMutex);
 		pFrameOut =  pvPortMalloc(sizeof(Frame_t));
 		FRAME_flush(pFrameOut);   // ensure it's ready
 		FRAME_put(pFrameOut , OBC_ADDRESS);     // put the dest

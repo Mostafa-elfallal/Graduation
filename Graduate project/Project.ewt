@@ -2647,6 +2647,9 @@
         <group>
             <name>inc</name>
             <file>
+                <name>$PROJ_DIR$\Services\Latch.h</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\Services\MemoryLayout.h</name>
             </file>
             <file>
@@ -2658,6 +2661,9 @@
         </group>
         <group>
             <name>src</name>
+            <file>
+                <name>$PROJ_DIR$\Services\Latch.c</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\Services\MemoryLayout.c</name>
             </file>

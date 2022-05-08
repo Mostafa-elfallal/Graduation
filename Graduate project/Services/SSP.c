@@ -11,7 +11,7 @@ static const pfCommand RecievedType[]={
   (pfCommand)&getTelemetryData, (pfCommand)&changeMotors,   (pfCommand)&flashWrite,       
   (pfCommand)&flashRead,        (pfCommand)&FlashErase,     (pfCommand)&Flashunlock,    
   (pfCommand)&Flashlock,        (pfCommand)&ReadLog,        (pfCommand)&getMotors,    
-  (pfCommand)&CUSTOM,           (pfCommand)&CUSTOM,         (pfCommand)&CUSTOM,    
+  (pfCommand)&StartLatch,       (pfCommand)&StopLatch,      (pfCommand)&CUSTOM,    
   (pfCommand)&CUSTOM,           (pfCommand)&CUSTOM,         (pfCommand)&CUSTOM,    
   (pfCommand)&CUSTOM,           (pfCommand)&CUSTOM,         (pfCommand)&CUSTOM,  
   (pfCommand)&CUSTOM,           (pfCommand)&CUSTOM,         (pfCommand)&CUSTOM,         

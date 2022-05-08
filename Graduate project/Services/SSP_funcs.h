@@ -26,6 +26,9 @@ void getTelemetryData(Frame_t * Framein , Frame_t * Frameout);
 void changeMotors(Frame_t * Framein , Frame_t * Frameout);
 void getMotors(Frame_t * Framein , Frame_t * Frameout);
 
+void StartLatch(Frame_t * Framein , Frame_t * Frameout);
+void StopLatch(Frame_t * Framein , Frame_t * Frameout);
+
 void flashWrite(Frame_t * Framein , Frame_t * Frameout);
 void flashRead(Frame_t * Framein , Frame_t * Frameout);
 void FlashErase(Frame_t * Framein , Frame_t * Frameout);

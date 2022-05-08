@@ -19,6 +19,7 @@ int main(void)
 	TransmittedFramesQueue = xQueueCreate(10 , sizeof(Frame_t*));
 	SavedFramesQueue 		= xQueueCreate(20 , sizeof(Frame_t*));
 	SensorsData.DataMutex 	= xSemaphoreCreateMutex();
+	latchvar.LatchMutex 	= xSemaphoreCreateMutex();
 	xTaskCreate(vFrame_Provider_Task 	,"Task1",300,NULL,2,NULL);
 	xTaskCreate(vLog_Saver_Task 		,"Task2",300,NULL,2,NULL);
 	xTaskCreate(vReceiver_Task 		,"Task3",300,NULL,2,NULL);

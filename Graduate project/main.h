@@ -10,6 +10,11 @@
 //Device 
 #include "stdint.h"
 #include "stm32f4xx.h"
+//FREERTOS
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
 //MCAL
 #include "RCC.h"
 #include "GPIO.h"
@@ -42,11 +47,8 @@
 #include "SSP.h"
 #include "SSP_funcs.h"
 #include "MemoryLayout.h"
-//FREERTOS
-#include "FreeRTOS.h"
-#include "task.h"
-#include "queue.h"
-#include "semphr.h"
+#include "Latch.h"
+
 /*
     **********************************************************************
     *   use #define LIS2 or LIS3 to include any of them as a magnetic sensor

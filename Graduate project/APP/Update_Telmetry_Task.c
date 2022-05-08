@@ -1,5 +1,6 @@
 #include "APP.h"
 extern Telemetry_t 	SensorsData;
+extern QueueHandle_t  ReceivedFramesQueue;
 #define DELAYMS 10
 void vUpdate_Telmetry_Task( void * pvParameters )
 {
@@ -21,6 +22,14 @@ void vUpdate_Telmetry_Task( void * pvParameters )
 			SensorsData.SS[i] = (float)ADC_readings[i] * 3.3 / (float)4096; // turn the ADC to float 
 		}
 		xSemaphoreGive( SensorsData.DataMutex );
+		xSemaphoreTake(latchvar.LatchMutex,portMAX_DELAY);
+		if(Latch_isset())
+		{
+			Frame_t * pLatchedFrame =  pvPortMalloc(sizeof(Frame_t));
+			*pLatchedFrame =   latchvar.LatchedFrame;
+			xQueueSend(ReceivedFramesQueue,&pLatchedFrame,portMAX_DELAY);
+		}
+		xSemaphoreGive(latchvar.LatchMutex);
 		vTaskDelay(pdMS_TO_TICKS(DELAYMS));
 	}
 }

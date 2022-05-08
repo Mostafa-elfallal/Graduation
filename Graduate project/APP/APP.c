@@ -7,6 +7,7 @@
 */
 #include "App.h"
 extern DevInfo_t		SensorsInfo;
+
 void APP_FLASHPins(void)
 {
   GPIO_InitTypeDef pins;

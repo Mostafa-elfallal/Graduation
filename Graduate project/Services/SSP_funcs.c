@@ -189,3 +189,17 @@ void ReadLog(Frame_t * Framein , Frame_t * Frameout)
 {
 	FrameLoad(Framein->data[3]);
 }
+void StartLatch(Frame_t * Framein , Frame_t * Frameout)
+{
+	xSemaphoreTake(latchvar.LatchMutex,portMAX_DELAY);
+	Latch_changeSetting(0);
+	Latch_changeLatching(1);
+	xSemaphoreGive(latchvar.LatchMutex);
+}
+void StopLatch(Frame_t * Framein , Frame_t * Frameout)
+{
+	xSemaphoreTake(latchvar.LatchMutex,portMAX_DELAY);
+	Latch_changeSetting(0);
+	Latch_changeLatching(0);
+	xSemaphoreGive(latchvar.LatchMutex);
+}
