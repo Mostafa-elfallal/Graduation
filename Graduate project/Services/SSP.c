@@ -6,11 +6,11 @@ static const pfCommand RecievedType[]={
   (pfCommand)&ping,             (pfCommand)&init,           (pfCommand)&ack,       
   (pfCommand)&nack,             (pfCommand)&get,            (pfCommand)&put,        
   (pfCommand)&read,             (pfCommand)&write,          (pfCommand)&id,               
-  (pfCommand)&RESERVED,         (pfCommand)&CUSTOM,         (pfCommand)&getGyroData,
+  (pfCommand)&RESERVED,         (pfCommand)&getAngles,      (pfCommand)&getGyroData,
   (pfCommand)&getMagnetoData,   (pfCommand)&getTempData,    (pfCommand)&getSSData,  
   (pfCommand)&getTelemetryData, (pfCommand)&changeMotors,   (pfCommand)&flashWrite,       
   (pfCommand)&flashRead,        (pfCommand)&FlashErase,     (pfCommand)&Flashunlock,    
-  (pfCommand)&Flashlock,        (pfCommand)&CUSTOM,         (pfCommand)&CUSTOM,    
+  (pfCommand)&Flashlock,        (pfCommand)&ReadLog,        (pfCommand)&getMotors,    
   (pfCommand)&CUSTOM,           (pfCommand)&CUSTOM,         (pfCommand)&CUSTOM,    
   (pfCommand)&CUSTOM,           (pfCommand)&CUSTOM,         (pfCommand)&CUSTOM,    
   (pfCommand)&CUSTOM,           (pfCommand)&CUSTOM,         (pfCommand)&CUSTOM,  
@@ -26,10 +26,6 @@ static const pfCommand RecievedType[]={
   (pfCommand)&RESERVED,         (pfCommand)&RESERVED,       (pfCommand)&RESERVED,  
   (pfCommand)&RESERVED,         (pfCommand)&RESERVED
 };
-void FRAME_changeState   (Frame_t* me,state_t newstate)
-{
-  me->state = newstate;
-}
 void FRAME_putError      (Frame_t* me,error_t newerror)
 {
   me->errorcode |= newerror;
@@ -39,11 +35,6 @@ uint8_t FRAME_checkError    (Frame_t* me,error_t newerror)
   if(me->errorcode & newerror)
         return 1;
   return 0;
-}
-uint8_t FRAME_checkState    (Frame_t* me,state_t newstate){
-    if(me->state == newstate)
-      return 1;
-    return 0;
 }
   // inserting data in frame
 void FRAME_put(Frame_t * Frame , uint8_t item)
@@ -56,7 +47,6 @@ void FRAME_put(Frame_t * Frame , uint8_t item)
 void FRAME_flush(Frame_t * Frame)
 {
   Frame ->datacnt = 0;
-  Frame ->state = sFRAME_RESET;
   Frame ->errorcode = eFRAME_RESET;
 }
   

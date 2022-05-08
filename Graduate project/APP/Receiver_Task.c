@@ -40,9 +40,10 @@ void vReceiver_Task( void * pvParameters )
 				FRAME_typeCall(type,pFrame,pFrameOut);     // call the received type with the place to put data in
 				//put in to be stored and out to be transmitted
 				xQueueSend(TransmittedFramesQueue,&pFrameOut,portMAX_DELAY);
-				xQueueSend(SavedFramesQueue,&pFrame,portMAX_DELAY);
+				
 			}
 		}
+		xQueueSend(SavedFramesQueue,&pFrame,portMAX_DELAY);
 		
 	}
 }

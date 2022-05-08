@@ -24,7 +24,7 @@
         <LeaveTargetRunning>_ 1</LeaveTargetRunning>
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>3530252993</Checksum>
+        <Checksum>1481123944</Checksum>
     </DebugChecksum>
     <Disassembly>
         <MixedMode>1</MixedMode>
@@ -137,6 +137,11 @@
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+        <Category>_ 0</Category>
+    </LogFile>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>3</Mode>
@@ -150,19 +155,17 @@
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
-    <LogFile>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ ""</LogFile>
-        <Category>_ 0</Category>
-    </LogFile>
     <DisassembleMode>
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
         <Bp0>_ 0 "EMUL_DATA" "APP_processIN" 0 0 0 0 4294967295</Bp0>
         <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\HAL\SSP.c}.121.1" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\Services\SSP_funcs.c}.111.3" 0 0 1 "" 0 "" 0</Bp2>
-        <Count>3</Count>
+        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\Services\SSP_funcs.c}.177.3" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\Transmitter_Task.c}.8.3" 0 0 1 "" 0 "" 0</Bp3>
+        <Bp4>_ 0 "EMUL_CODE" "{$PROJ_DIR$\Services\MemoryLayout.c}.34.2" 0 0 1 "" 0 "" 0</Bp4>
+        <Bp5>_ 1 "EMUL_CODE" "{$PROJ_DIR$\HAL\MRAM.c}.19.3" 0 0 1 "" 0 "" 0</Bp5>
+        <Count>6</Count>
     </Breakpoints2>
     <Aliases>
         <Count>0</Count>

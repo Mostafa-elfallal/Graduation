@@ -6,7 +6,7 @@
   ******************************************************************************
 */
 #include "App.h"
-
+extern DevInfo_t		SensorsInfo;
 void APP_FLASHPins(void)
 {
   GPIO_InitTypeDef pins;
@@ -176,11 +176,13 @@ void APP_init(void){
   APP_TimerPins(); 
   //SPI 
   APP_SPIPins();
-  //MAGNETO_init();
-  //Temp_init();
-  //GYRO_init();
-  //MRAM_init();
-  //FROM_init();
+  MAGNETO_init();
+  SensorsInfo.Magneto_WIA = MAGNETO_read_WIA();
+  Temp_init();
+  GYRO_init();
+  SensorsInfo.Gyro_WIA = GYRO_read_WIA();
+  MRAM_init();
+  FROM_init();
   //enable
   __enable_irq();
 }

@@ -10,14 +10,22 @@ QueueHandle_t  FramesQueue; // used by ISR to receive new frames
 QueueHandle_t  ReceivedFramesQueue; // used by ISR to rstore the received frames
 QueueHandle_t  TransmittedFramesQueue;  // storage of frames that will be tranmitted
 QueueHandle_t  SavedFramesQueue;         // storage of frames that will be saved
+Telemetry_t 	SensorsData;
+DevInfo_t		SensorsInfo;
 int main(void)
 {
-	FramesQueue = xQueueCreate(10 , sizeof(Frame_t*)); 
-	ReceivedFramesQueue = xQueueCreate(10 , sizeof(Frame_t*));
+	FramesQueue 			= xQueueCreate(10 , sizeof(Frame_t*)); 
+	ReceivedFramesQueue 	= xQueueCreate(10 , sizeof(Frame_t*));
 	TransmittedFramesQueue = xQueueCreate(10 , sizeof(Frame_t*));
-	SavedFramesQueue = xQueueCreate(20 , sizeof(Frame_t*));
-	xTaskCreate(vFrame_Provider_Task ,"Task1",1000,NULL,2,NULL);
+	SavedFramesQueue 		= xQueueCreate(20 , sizeof(Frame_t*));
+	SensorsData.DataMutex 	= xSemaphoreCreateMutex();
+	xTaskCreate(vFrame_Provider_Task 	,"Task1",300,NULL,2,NULL);
+	xTaskCreate(vLog_Saver_Task 		,"Task2",300,NULL,2,NULL);
+	xTaskCreate(vReceiver_Task 		,"Task3",300,NULL,2,NULL);
+	xTaskCreate(vTransmitter_Task 		,"Task4",300,NULL,2,NULL);
+	xTaskCreate(vUpdate_Telmetry_Task 		,"Task4",300,NULL,2,NULL);
 	APP_init();
+	vTaskStartScheduler();
 	while(1){
 		/*
 		APP_processIN();

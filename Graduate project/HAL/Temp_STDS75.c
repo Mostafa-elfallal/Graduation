@@ -12,13 +12,15 @@
 */
 #include "Temp_STDS75.h"
 
-
+#ifdef USE_TEMP
 static TempSensor_t sensor = {
     .resBits = Res_12bits,
     .mode=Mode_Interrupt
 };
+#endif
 void Temp_init(void)
 {
+#ifdef USE_TEMP
   uint8_t data[3];
   uint8_t val = 0x00;
   switch(sensor.resBits)
@@ -55,13 +57,18 @@ void Temp_init(void)
   uint16_t OverTemp = ((uint16_t)(sensor.OT / sensor.res)) << sensor.shiftBits ;
   data[0] = 0x03;   data[1] = OverTemp >> 8;  data[2] = OverTemp & 0xff;
   I2C_myTransmit(I2C2,STDS75_ADDRESS,data , 3);
+#endif
 }
 //  TODO 
 //  enable interrupt for sensor 
 float Temp_Read(void)
 {
+#ifdef USE_TEMP
   uint8_t data[2] = {0};
   I2C_myRequest(I2C2 , STDS75_ADDRESS , 0 , data , 2);
   float temp = (((float)((data[0]<<8 | data[1])>>sensor.shiftBits))) * (sensor.res) ;
   return temp;
+#else
+  return 37.5;
+#endif
 }

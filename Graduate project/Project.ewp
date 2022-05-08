@@ -621,7 +621,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state></state>
+                    <state>$PROJ_DIR$\FREERTOS</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -2132,6 +2132,9 @@
         <file>
             <name>$PROJ_DIR$\APP\UART_Handler.c</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\APP\Update_Telmetry_Task.c</name>
+        </file>
     </group>
     <group>
         <name>Device</name>
@@ -2253,6 +2256,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\FREERTOS\port.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\FREERTOS\portasm.s</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\FREERTOS\queue.c</name>
@@ -2381,6 +2387,9 @@
         <group>
             <name>inc</name>
             <file>
+                <name>$PROJ_DIR$\Services\MemoryLayout.h</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\Services\SSP.h</name>
             </file>
             <file>
@@ -2389,6 +2398,9 @@
         </group>
         <group>
             <name>src</name>
+            <file>
+                <name>$PROJ_DIR$\Services\MemoryLayout.c</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\Services\SSP.c</name>
             </file>

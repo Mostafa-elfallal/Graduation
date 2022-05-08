@@ -10,7 +10,9 @@
 
 void FROM_init(void)
 {
+#ifdef USE_FROM
   SPI_CS_HIGH(FROM_CS_PORT,FROM_CS_PIN);
+#endif
 }
 /**
   * @brief  Enables the write access to the FLASH.
@@ -19,6 +21,7 @@ void FROM_init(void)
   */
 void FROM_WriteEnable(void)
 {
+#ifdef USE_FROM
   /*!< Select the FLASH: Chip Select low */
   SPI_CS_LOW(FROM_CS_PORT,FROM_CS_PIN);
   
@@ -27,6 +30,7 @@ void FROM_WriteEnable(void)
   
   /*!< Deselect the FLASH: Chip Select high */
    SPI_CS_HIGH(FROM_CS_PORT,FROM_CS_PIN);
+#endif
 }
 /**
   * @brief  Erases the specified FLASH sector.
@@ -35,6 +39,7 @@ void FROM_WriteEnable(void)
   */
 void FROM_EraseSector(uint32_t SectorAddr)
 {
+#ifdef USE_FROM
   /*!< Send write enable instruction */
   FROM_WriteEnable();
 
@@ -54,6 +59,7 @@ void FROM_EraseSector(uint32_t SectorAddr)
 
   /*!< Wait the end of Flash writing */
   FROM_WaitForWriteEnd();
+#endif
 }
 /**
   * @brief  Polls the status of the Write In Progress (WIP) flag in the FLASH's
@@ -63,6 +69,7 @@ void FROM_EraseSector(uint32_t SectorAddr)
   */
 void FROM_WaitForWriteEnd(void)
 {
+#ifdef USE_FROM
   uint8_t flashstatus = 0;
 
   /*!< Select the FLASH: Chip Select low */
@@ -83,6 +90,7 @@ void FROM_WaitForWriteEnd(void)
 
   /*!< Deselect the FLASH: Chip Select high */
   SPI_CS_HIGH(FROM_CS_PORT,FROM_CS_PIN);
+#endif
 }
 /**
   * @brief  Erases the entire FLASH.
@@ -91,6 +99,7 @@ void FROM_WaitForWriteEnd(void)
   */
 void sFLASH_EraseBulk(void)
 {
+#ifdef USE_FROM
   /*!< Send write enable instruction */
   FROM_WriteEnable();
 
@@ -104,6 +113,7 @@ void sFLASH_EraseBulk(void)
 
   /*!< Wait the end of Flash writing */
   FROM_WaitForWriteEnd();
+#endif
 }
 
 /**
@@ -119,6 +129,7 @@ void sFLASH_EraseBulk(void)
   */
 void FROM_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint8_t NumByteToWrite)
 {
+#ifdef USE_FROM
   /*!< Enable the write access to the FLASH */
   FROM_WriteEnable();
 
@@ -147,6 +158,7 @@ void FROM_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint8_t NumByteToWri
 
   /*!< Wait the end of Flash writing */
   FROM_WaitForWriteEnd();
+#endif
 }
 
 /**
@@ -158,6 +170,7 @@ void FROM_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint8_t NumByteToWri
   */
 void sFLASH_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead)
 {
+#ifdef USE_FROM
   /*!< Select the FLASH: Chip Select low */
   SPI_CS_LOW(FROM_CS_PORT,FROM_CS_PIN);
 
@@ -181,4 +194,5 @@ void sFLASH_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteToRe
 
   /*!< Deselect the FLASH: Chip Select high */
   SPI_CS_HIGH(FROM_CS_PORT,FROM_CS_PIN);
+#endif
 }

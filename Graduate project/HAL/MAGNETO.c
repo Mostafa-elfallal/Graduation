@@ -29,7 +29,8 @@ void MAGNETO_init(void)
   buf[0] = LIS3MDL_REG_CTRL_REG4;
   buf[1] = 0x08;
   I2C_myTransmit(I2C2,LIS3MDL_I2CADDR_DEFAULT,buf,2);
-  
+#else
+  // do nothing 
 #endif
 }
 void MAGNETO_Read(float *data)
@@ -49,6 +50,10 @@ void MAGNETO_Read(float *data)
   data[0] = (float)( reader[0] | (reader[1] << 8 ) ) / scale * 100;
   data[1] = (float)( reader[2] | (reader[3] << 8) ) / scale * 100;
   data[2] = (float)( reader[4] | (reader[5] << 8) ) / scale * 100;
+#else
+  data[0] = 3.2+reader[0];
+  data[1] = 2.5;
+  data[2] = 4.9;
 #endif
   
 }
@@ -60,6 +65,8 @@ uint8_t MAGNETO_read_WIA(void)
   I2C_myRequest(I2C2,LIS2MDL_ADDRESS_MAG,LIS2MDL_WHO_AM_I,&reader,1);
 #elif defined(LIS3)
   I2C_myRequest(I2C2,LIS3MDL_I2CADDR_DEFAULT,LIS3MDL_REG_WHO_AM_I,&reader,1);
+#else
+  reader = 0xAA;
 #endif
   
   return reader;

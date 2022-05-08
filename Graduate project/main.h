@@ -20,12 +20,19 @@
 #include "SPI.h"
 #include "FLASH.h"
 //HAL
-#define LIS2
+//#define LIS2
 //#define LIS3
+#define NO_MAGNETO
 
+#define NO_GYRO
 //#define A3G
 //#define IAM
-#define MPU6050
+//#define MPU6050
+
+//#define USE_MRAM
+//#define USE_FROM
+//#define USE_TEMP
+
 #include "Gyroscope.h"
 #include "magnetometer.h"
 #include "Temp_STDS75.h"
@@ -34,6 +41,7 @@
 //Services
 #include "SSP.h"
 #include "SSP_funcs.h"
+#include "MemoryLayout.h"
 //FREERTOS
 #include "FreeRTOS.h"
 #include "task.h"
@@ -48,7 +56,7 @@
     **********************************************************************
 */
 
-#define BAUDRATE                    9600
+#define BAUDRATE                    115200
 #define FESC                        0xdb
 #define DEST                        0
 #define SRC                         1

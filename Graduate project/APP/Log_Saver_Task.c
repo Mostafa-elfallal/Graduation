@@ -7,6 +7,8 @@ void vLog_Saver_Task( void * pvParameters )
 	{
 		xQueueReceive( SavedFramesQueue,&pFrame,portMAX_DELAY);
 		//save Frame
+		//need mutex here 
+		FrameStore(pFrame);
 		vPortFree(pFrame);
 	}
 }

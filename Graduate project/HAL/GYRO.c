@@ -34,6 +34,8 @@ void GYRO_init(void){
   buf[1] = ( 0x03 << 3 );
   buf[0] = MPU6050_GYRO_CONFIG;
   I2C_myTransmit(I2C2,MPU6050_I2C_ADDRESS,buf,2);
+#else
+  //nothing
   
 #endif
   
@@ -56,6 +58,10 @@ void GYRO_Read(float *data){
   data[0] = (float)((int16_t)((reader[0]<< 8) | reader[1])) * 0.001064225153455f;
   data[1] = (float)((int16_t)((reader[2]<< 8) | reader[3])) * 0.001064225153455f;
   data[2] = (float)((int16_t)((reader[4]<< 8) | reader[5])) * 0.001064225153455f;
+#else
+  data[0] = 50.6 + reader[0];
+  data[1] = 60.5;
+  data[2] = 70.4;
 #endif
 }
 uint8_t GYRO_read_WIA(void){
@@ -67,6 +73,8 @@ uint8_t GYRO_read_WIA(void){
 #elif defined(MPU6050)
   
   I2C_myRequest(I2C2,MPU6050_I2C_ADDRESS,MPU6050_WHO_AM_I,&reader,1);
+#else 
+  reader = 0x55;
 #endif
   return reader;
 }

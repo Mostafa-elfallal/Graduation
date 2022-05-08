@@ -15,8 +15,9 @@
 #include "GYRO_IAM.h"
 #elif defined(MPU6050)
 #include "GYRO_MPU.h"
-#else 
-#error "Use #define MPU or IAM or A3G"
+#elif defined(NO_GYRO)
+#else
+#error "Use #define MPU or IAM or A3G or NO_GYRO"
 #endif
 void GYRO_init(void);
 void GYRO_Read(float *data);

@@ -26,6 +26,7 @@ build Log_Saver_Task.pbi : index Log_Saver_Task.xcl
 build Receiver_Task.pbi : index Receiver_Task.xcl
 build Transmitter_Task.pbi : index Transmitter_Task.xcl
 build UART_Handler.pbi : index UART_Handler.xcl
+build Update_Telmetry_Task.pbi : index Update_Telmetry_Task.xcl
 build misc.pbi : index misc.xcl
 build system_stm32f4xx.pbi : index system_stm32f4xx.xcl
 build event_groups.pbi : index event_groups.xcl
@@ -48,15 +49,16 @@ build RCC.pbi : index RCC.xcl
 build SPI.pbi : index SPI.xcl
 build TMR.pbi : index TMR.xcl
 build USART.pbi : index USART.xcl
+build MemoryLayout.pbi : index MemoryLayout.xcl
 build SSP.pbi : index SSP.xcl
 build SSP_funcs.pbi : index SSP_funcs.xcl
 build main.pbi : index main.xcl
 build Project_part0.pbi : link APP.pbi Frame_Provider_Task.pbi Log_Saver_Task.pbi Receiver_Task.pbi Transmitter_Task.pbi UART_Handler.pbi
-build Project_part1.pbi : link misc.pbi system_stm32f4xx.pbi event_groups.pbi heap_4.pbi list.pbi port.pbi
-build Project_part2.pbi : link queue.pbi tasks.pbi timers.pbi FROM.pbi GYRO.pbi MAGNETO.pbi
-build Project_part3.pbi : link MRAM.pbi Temp_STDS75.pbi ADC.pbi FLASH.pbi GPIO.pbi I2C.pbi
-build Project_part4.pbi : link RCC.pbi SPI.pbi TMR.pbi USART.pbi SSP.pbi SSP_funcs.pbi
-build Project_part5.pbi : link main.pbi
+build Project_part1.pbi : link Update_Telmetry_Task.pbi misc.pbi system_stm32f4xx.pbi event_groups.pbi heap_4.pbi list.pbi
+build Project_part2.pbi : link port.pbi queue.pbi tasks.pbi timers.pbi FROM.pbi GYRO.pbi
+build Project_part3.pbi : link MAGNETO.pbi MRAM.pbi Temp_STDS75.pbi ADC.pbi FLASH.pbi GPIO.pbi
+build Project_part4.pbi : link I2C.pbi RCC.pbi SPI.pbi TMR.pbi USART.pbi MemoryLayout.pbi
+build Project_part5.pbi : link SSP.pbi SSP_funcs.pbi main.pbi
 build Project.pbd : link Project_part0.pbi Project_part1.pbi Project_part2.pbi Project_part3.pbi Project_part4.pbi Project_part5.pbi
 build Project.pbw : browsedata Project.pbd
 
