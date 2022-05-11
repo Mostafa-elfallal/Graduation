@@ -3,5 +3,5 @@
 #include "main.h"
 
 void FrameStore(Frame_t * frame);    // store this frame in MRAM
-void FrameLoad(uint8_t numOfFrames);   // Load the last numOfFrames in transmitter task
+void FrameLoad(uint16_t numOfFrames);   // Load the last numOfFrames in transmitter task
 #endif

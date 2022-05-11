@@ -1,7 +1,7 @@
 #include "APP.h"
 extern Telemetry_t 	SensorsData;
 extern QueueHandle_t  ReceivedFramesQueue;
-#define DELAYMS 10
+#define DELAYMS 70
 void vUpdate_Telmetry_Task( void * pvParameters )
 {
 	uint16_t ADC_readings[5]={0};

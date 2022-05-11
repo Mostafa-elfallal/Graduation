@@ -29,7 +29,7 @@ void FrameStore(Frame_t * frame)
 	if(size < 256)
 		size ++;
 }
-void FrameLoad(uint8_t numOfFrames)
+void FrameLoad(uint16_t numOfFrames)
 {
 	if ( numOfFrames == 0 || numOfFrames > size)
 	{
@@ -37,7 +37,7 @@ void FrameLoad(uint8_t numOfFrames)
 		numOfFrames = size;
 	}
 	uint8_t startindex = getIndexStart(numOfFrames);
-	for(uint8_t i = 0;i<numOfFrames;i++)
+	for(uint16_t i = 0;i<numOfFrames;i++)
 	{
 		ptempFrame=pvPortMalloc(sizeof(Frame_t));
 		FrameGet(startindex+i);
