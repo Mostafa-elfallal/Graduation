@@ -20,19 +20,7 @@ void GYRO_init(void){
 #elif defined(IAM)
   //don't need i think
 #elif defined(MPU6050)
-  uint8_t buf[] = {MPU6050_PWR_MGMT_1 , 0x80}; 
-  I2C_myTransmit(I2C2,MPU6050_I2C_ADDRESS,buf,2);
-  buf[1] = 0x00;
-  I2C_myTransmit(I2C2,MPU6050_I2C_ADDRESS,buf,2);
-  I2C_myRequest(I2C2,MPU6050_I2C_ADDRESS,MPU6050_PWR_MGMT_2,&buf[1],1);
-  buf[1] &= ~(0x38 | 0x07);
-  buf[0] = MPU6050_PWR_MGMT_2;
-  I2C_myTransmit(I2C2,MPU6050_I2C_ADDRESS,buf,2);
-  buf[1] = ( 0x00 << 3 );
-  buf[0] = MPU6050_ACCEL_CONFIG;
-  I2C_myTransmit(I2C2,MPU6050_I2C_ADDRESS,buf,2);
-  buf[1] = ( 0x03 << 3 );
-  buf[0] = MPU6050_GYRO_CONFIG;
+  uint8_t buf[] = {MPU6050_PWR_MGMT_1 , 0x0}; 
   I2C_myTransmit(I2C2,MPU6050_I2C_ADDRESS,buf,2);
 #else
   //nothing
@@ -55,9 +43,9 @@ void GYRO_Read(float *data){
 #elif defined(MPU6050)
   
   I2C_myRequest(I2C2,MPU6050_I2C_ADDRESS,MPU6050_GYRO_XOUT_H,reader,6);
-  data[0] = (float)((int16_t)((reader[0]<< 8) | reader[1])) * 0.001064225153455f;
-  data[1] = (float)((int16_t)((reader[2]<< 8) | reader[3])) * 0.001064225153455f;
-  data[2] = (float)((int16_t)((reader[4]<< 8) | reader[5])) * 0.001064225153455f;
+  data[0] = (float)((int16_t)((reader[0]<< 8) | reader[1])) /131.0 +2;
+  data[1] = (float)((int16_t)((reader[2]<< 8) | reader[3])) /131.0 - 2.5;
+  data[2] = (float)((int16_t)((reader[4]<< 8) | reader[5])) /131.0 -.5;
 #else
   data[0] = 50.6 + reader[0];
   data[1] = 60.5;

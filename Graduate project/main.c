@@ -24,7 +24,7 @@ int main(void)
 	xTaskCreate(vLog_Saver_Task 		,"Task2",300,NULL,2,NULL);
 	xTaskCreate(vReceiver_Task 		,"Task3",300,NULL,2,NULL);
 	xTaskCreate(vTransmitter_Task 		,"Task4",300,NULL,2,NULL);
-	xTaskCreate(vUpdate_Telmetry_Task 		,"Task4",300,NULL,2,NULL);
+	xTaskCreate(vUpdate_Telmetry_Task 	,"Task5",300,NULL,2,NULL);
 	APP_init();
 	vTaskStartScheduler();
 	while(1){
