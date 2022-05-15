@@ -22,7 +22,7 @@ typedef struct
 {
 	uint8_t Gyro_WIA;
 	uint8_t Magneto_WIA;
-	int8_t Motors[3];
+	uint8_t Motors[3];
 }DevInfo_t;
 //Tasks 
 void vFrame_Provider_Task( void * pvParameters );

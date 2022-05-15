@@ -257,6 +257,6 @@
 #define TIM_FLAG_CC4OF                     ((uint16_t)0x1000)
 
 void TMR_myInit(void);
-void TMR_setPWM(uint8_t motor , uint8_t channel , uint8_t speed);
+void TMR_setPWM(uint8_t* motors);
 
 #endif

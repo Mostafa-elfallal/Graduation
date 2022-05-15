@@ -135,28 +135,17 @@ void getTelemetryData(Frame_t * Framein , Frame_t * Frameout){
   getSSData(Framein,Frameout);
 }
 void changeMotors(Frame_t * Framein , Frame_t * Frameout){
-	for(uint8_t i = 3;i<10;i+=3)
+	TMR_setPWM(&(Framein->data[3]));
+	for(uint8_t i = 0;i<3;i++)
 	{
-		TMR_setPWM(Framein->data[i] , Framein->data[i+1] , Framein->data[i+2]);
-		SensorsInfo.Motors[(i/3)-1]= (Framein->data[i+1] == 1) ? 
-						Framein->data[i+2]  : -Framein->data[i+2];
+		SensorsInfo.Motors[i]= Framein->data[3+i];
 	}
-  Frameout->data[TYPE] = ACK;
+	Frameout->data[TYPE] = ACK;
 }
 void getMotors(Frame_t * Framein , Frame_t * Frameout){
 	for( uint8_t i = 0;i<3;i++ )
 	{
-		FRAME_put(Frameout,i+1);
-		if( SensorsInfo.Motors[i] < (int8_t)0)
-		{
-			FRAME_put(Frameout,2);
-			FRAME_put(Frameout,(uint8_t)(0-SensorsInfo.Motors[i]));
-		}
-		else
-		{
-			FRAME_put(Frameout,1);
-			FRAME_put(Frameout,(uint8_t)(SensorsInfo.Motors[i]));
-		}
+		FRAME_put(Frameout,SensorsInfo.Motors[i]);
 	}
 }
 void flashWrite(Frame_t * Framein , Frame_t * Frameout)
