@@ -30,9 +30,13 @@ void vLog_Saver_Task( void * pvParameters );
 void vReceiver_Task( void * pvParameters );
 void vTransmitter_Task( void * pvParameters );
 void vUpdate_Telmetry_Task  ( void * pvParameters );
-void APP_processIN(void);
+void vLatch_Task ( void * pvParameters );
 void APP_init(void);
+/*
+void APP_processIN(void);
+
 void APP_processOUT(void);
 void APP_execute(void);
 void APP_Reply(void);
+*/
 #endif

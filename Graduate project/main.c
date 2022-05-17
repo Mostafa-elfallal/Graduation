@@ -6,10 +6,11 @@
 */
 #include "main.h"
 #include "APP.h"
-QueueHandle_t  FramesQueue; // used by ISR to receive new frames
-QueueHandle_t  ReceivedFramesQueue; // used by ISR to rstore the received frames
-QueueHandle_t  TransmittedFramesQueue;  // storage of frames that will be tranmitted
-QueueHandle_t  SavedFramesQueue;         // storage of frames that will be saved
+QueueHandle_t  	FramesQueue; // used by ISR to receive new frames
+QueueHandle_t  	ReceivedFramesQueue; // used by ISR to rstore the received frames
+QueueHandle_t  	TransmittedFramesQueue;  // storage of frames that will be tranmitted
+QueueHandle_t  	SavedFramesQueue;         // storage of frames that will be saved a
+TaskHandle_t	Latch_Handle;
 Telemetry_t 	SensorsData;
 DevInfo_t		SensorsInfo;
 int main(void)
@@ -22,10 +23,12 @@ int main(void)
 	latchvar.LatchMutex 	= xSemaphoreCreateMutex();
 	xTaskCreate(vFrame_Provider_Task 	,"Task1",300,NULL,2,NULL);
 	xTaskCreate(vLog_Saver_Task 		,"Task2",300,NULL,2,NULL);
-	xTaskCreate(vReceiver_Task 		,"Task3",300,NULL,2,NULL);
+	xTaskCreate(vReceiver_Task 			,"Task3",300,NULL,2,NULL);
 	xTaskCreate(vTransmitter_Task 		,"Task4",300,NULL,2,NULL);
 	xTaskCreate(vUpdate_Telmetry_Task 	,"Task5",300,NULL,2,NULL);
+	xTaskCreate(vLatch_Task 			,"Task6",300,NULL,3,&Latch_Handle);
 	APP_init();
+	vTaskSuspend(Latch_Handle);
 	vTaskStartScheduler();
 	while(1){
 		/*

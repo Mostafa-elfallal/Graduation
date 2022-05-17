@@ -20,5 +20,8 @@ void  	Latch_changeLatching(uint8_t newLatching)
 }
 void 	Latch_frame(Frame_t* pframe)
 {
+	if(pframe->data[2] !=  latchvar.LatchedFrame.data[2])
+	{
 	 latchvar.LatchedFrame =* pframe;
+	}
 }

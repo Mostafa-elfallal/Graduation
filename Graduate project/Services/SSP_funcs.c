@@ -1,6 +1,7 @@
 #include "APP.h"
 extern Telemetry_t 	SensorsData;
-extern DevInfo_t		SensorsInfo;
+extern DevInfo_t	SensorsInfo;
+extern TaskHandle_t	Latch_Handle;
 void queuefloat(Frame_t * Frame,uint8_t * data)
 {
   for(uint8_t i = 0;i<4;i++)
@@ -184,6 +185,7 @@ void StartLatch(Frame_t * Framein , Frame_t * Frameout)
 	Latch_changeSetting(0);
 	Latch_changeLatching(1);
 	xSemaphoreGive(latchvar.LatchMutex);
+	vTaskResume(Latch_Handle);
 }
 void StopLatch(Frame_t * Framein , Frame_t * Frameout)
 {
