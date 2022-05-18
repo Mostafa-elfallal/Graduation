@@ -44,6 +44,7 @@ main.pbi: D:\Workspace\IAR\Graduate\ project\main.c \
   D:\Workspace\IAR\Graduate\ project\MCAL/RCC.h \
   D:\Workspace\IAR\Graduate\ project\MCAL\FLASH.h \
   D:\Workspace\IAR\Graduate\ project\HAL\Gyroscope.h \
+  D:\Workspace\IAR\Graduate\ project\HAL/GYRO_MPU.h \
   D:\Workspace\IAR\Graduate\ project\HAL\magnetometer.h \
   D:\Workspace\IAR\Graduate\ project\HAL\Temp_STDS75.h \
   D:\Workspace\IAR\Graduate\ project\HAL\MRAM.h \

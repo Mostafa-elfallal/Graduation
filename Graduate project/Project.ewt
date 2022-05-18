@@ -2381,6 +2381,9 @@
             <name>$PROJ_DIR$\APP\Frame_Provider_Task.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\APP\Latch_Task.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\APP\Log_Saver_Task.c</name>
         </file>
         <file>

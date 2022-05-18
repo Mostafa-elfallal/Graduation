@@ -51,4 +51,5 @@ GYRO.pbi: D:\Workspace\IAR\Graduate\ project\HAL\GYRO.c \
   D:\Workspace\IAR\Graduate\ project\Services\SSP.h \
   D:\Workspace\IAR\Graduate\ project\Services\SSP_funcs.h \
   D:\Workspace\IAR\Graduate\ project\Services\MemoryLayout.h \
-  D:\Workspace\IAR\Graduate\ project\Services\Latch.h
+  D:\Workspace\IAR\Graduate\ project\Services\Latch.h \
+  D:\Workspace\IAR\Graduate\ project\HAL/GYRO_MPU.h

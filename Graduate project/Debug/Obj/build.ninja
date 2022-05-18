@@ -22,6 +22,7 @@ rule browsedata
 #Build steps
 build APP.pbi : index APP.xcl
 build Frame_Provider_Task.pbi : index Frame_Provider_Task.xcl
+build Latch_Task.pbi : index Latch_Task.xcl
 build Log_Saver_Task.pbi : index Log_Saver_Task.xcl
 build Receiver_Task.pbi : index Receiver_Task.xcl
 build Transmitter_Task.pbi : index Transmitter_Task.xcl
@@ -54,12 +55,12 @@ build MemoryLayout.pbi : index MemoryLayout.xcl
 build SSP.pbi : index SSP.xcl
 build SSP_funcs.pbi : index SSP_funcs.xcl
 build main.pbi : index main.xcl
-build Project_part0.pbi : link APP.pbi Frame_Provider_Task.pbi Log_Saver_Task.pbi Receiver_Task.pbi Transmitter_Task.pbi UART_Handler.pbi
-build Project_part1.pbi : link Update_Telmetry_Task.pbi misc.pbi system_stm32f4xx.pbi event_groups.pbi heap_4.pbi list.pbi
-build Project_part2.pbi : link port.pbi queue.pbi tasks.pbi timers.pbi FROM.pbi GYRO.pbi
-build Project_part3.pbi : link MAGNETO.pbi MRAM.pbi Temp_STDS75.pbi ADC.pbi FLASH.pbi GPIO.pbi
-build Project_part4.pbi : link I2C.pbi RCC.pbi SPI.pbi TMR.pbi USART.pbi Latch.pbi
-build Project_part5.pbi : link MemoryLayout.pbi SSP.pbi SSP_funcs.pbi main.pbi
+build Project_part0.pbi : link APP.pbi Frame_Provider_Task.pbi Latch_Task.pbi Log_Saver_Task.pbi Receiver_Task.pbi Transmitter_Task.pbi
+build Project_part1.pbi : link UART_Handler.pbi Update_Telmetry_Task.pbi misc.pbi system_stm32f4xx.pbi event_groups.pbi heap_4.pbi
+build Project_part2.pbi : link list.pbi port.pbi queue.pbi tasks.pbi timers.pbi FROM.pbi
+build Project_part3.pbi : link GYRO.pbi MAGNETO.pbi MRAM.pbi Temp_STDS75.pbi ADC.pbi FLASH.pbi
+build Project_part4.pbi : link GPIO.pbi I2C.pbi RCC.pbi SPI.pbi TMR.pbi USART.pbi
+build Project_part5.pbi : link Latch.pbi MemoryLayout.pbi SSP.pbi SSP_funcs.pbi main.pbi
 build Project.pbd : link Project_part0.pbi Project_part1.pbi Project_part2.pbi Project_part3.pbi Project_part4.pbi Project_part5.pbi
 build Project.pbw : browsedata Project.pbd
 

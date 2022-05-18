@@ -18,13 +18,13 @@
     <StLinkDriver>
         <stlinkserialNo>USB0</stlinkserialNo>
         <stlinkfoundProbes />
-        <stlinkResetStyle>0</stlinkResetStyle>
-        <stlinkResetStrategy>0</stlinkResetStrategy>
         <CStepIntDis>_ 0</CStepIntDis>
         <LeaveTargetRunning>_ 1</LeaveTargetRunning>
+        <stlinkResetStyle>0</stlinkResetStyle>
+        <stlinkResetStrategy>0</stlinkResetStrategy>
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>1481123944</Checksum>
+        <Checksum>1391679279</Checksum>
     </DebugChecksum>
     <Disassembly>
         <MixedMode>1</MixedMode>
@@ -84,9 +84,12 @@
     <watch_formats>
         <Fmt0>{W}1:Address	4	0</Fmt0>
         <Fmt1>{W}1:Word	4	0</Fmt1>
-        <Fmt2>{W}1:calculatedCRC	4	0</Fmt2>
-        <Fmt3>{W}1:crc	4	0</Fmt3>
-        <Fmt4>{W}1:rcvCRC	4	0</Fmt4>
+        <Fmt2>{W}1:address	4	0</Fmt2>
+        <Fmt3>{W}1:calculatedCRC	4	0</Fmt3>
+        <Fmt4>{W}1:crc	4	0</Fmt4>
+        <Fmt5>{W}1:data	3	0</Fmt5>
+        <Fmt6>{W}1:rcvCRC	4	0</Fmt6>
+        <Fmt7>{W}1:speed	3	0</Fmt7>
     </watch_formats>
     <Trace2>
         <Enabled>0</Enabled>
@@ -133,6 +136,16 @@
         <ShowTimeSum>1</ShowTimeSum>
         <SumSortOrder>0</SumSortOrder>
     </EventLog>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Bp0>_ 0 "EMUL_DATA" "APP_processIN" 0 0 0 0 4294967295</Bp0>
+        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\HAL\SSP.c}.121.1" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\Transmitter_Task.c}.8.3" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 0 "EMUL_CODE" "{$PROJ_DIR$\MCAL\I2C.c}.179.5" 0 0 1 "" 0 "" 0</Bp3>
+        <Count>4</Count>
+    </Breakpoints2>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -142,6 +155,10 @@
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </LogFile>
+    <Aliases>
+        <Count>0</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>3</Mode>
@@ -155,20 +172,4 @@
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Bp0>_ 0 "EMUL_DATA" "APP_processIN" 0 0 0 0 4294967295</Bp0>
-        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\HAL\SSP.c}.121.1" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\Services\SSP_funcs.c}.177.3" 0 0 1 "" 0 "" 0</Bp2>
-        <Bp3>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\Transmitter_Task.c}.8.3" 0 0 1 "" 0 "" 0</Bp3>
-        <Bp4>_ 0 "EMUL_CODE" "{$PROJ_DIR$\Services\MemoryLayout.c}.34.2" 0 0 1 "" 0 "" 0</Bp4>
-        <Bp5>_ 1 "EMUL_CODE" "{$PROJ_DIR$\HAL\MRAM.c}.19.3" 0 0 1 "" 0 "" 0</Bp5>
-        <Count>6</Count>
-    </Breakpoints2>
-    <Aliases>
-        <Count>0</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
 </settings>
