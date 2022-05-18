@@ -1,0 +1,123 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration file="D:\Workspace\MatLAB\GCS\mainapp.prj" location="D:\Workspace\MatLAB\GCS" name="mainapp" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>CTE_TU</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>1.0</param.version>
+    <param.authnamewatermark>TEAM #</param.authnamewatermark>
+    <param.email>Saba7_Saba7@Saba7.Saba7</param.email>
+    <param.company>TU</param.company>
+    <param.summary>دا برنامج جامد كدا معمول علشان نبسطكم معانا</param.summary>
+    <param.description>1) Connect to the proper Serial COM.
+2) Command Our ADCS with your wishes
+3) Wait for greatness
+4) Saba7</param.description>
+    <param.screenshot>${PROJECT_ROOT}\download.png</param.screenshot>
+    <param.guid />
+    <param.installpath.string>\TU\CTE_TU\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\mainapp\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\mainapp\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\mainapp\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\mainapp</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>false</param.web.mcr>
+    <param.package.mcr>true</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text>Syntax 
+	  -? 
+	 
+ Input Arguments 
+	 -?  print help on how to use the application 
+	 input arguments 
+ Description 
+ 	 1) Connect to the proper Serial COM.
+2) Command Our ADCS with your wishes
+3) Wait for greatness
+4) Saba7</param.help.text>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.version />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.install.notes />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\mainapp.mlapp</file>
+    </fileset.main>
+    <fileset.resources />
+    <fileset.package />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\Angleapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Gyroscopapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Logapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Magnetometerapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Memoryapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Motorsapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Process.m</file>
+      <file>${PROJECT_ROOT}\Sunsensorsapp.mlapp</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\mainapp\for_testing" name="readme.txt" optional="true">D:\Workspace\MatLAB\GCS\mainapp\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\mainapp\for_testing" name="CTE_TU.exe" optional="false">D:\Workspace\MatLAB\GCS\mainapp\for_testing\CTE_TU.exe</file>
+      <file location="${PROJECT_ROOT}\mainapp\for_testing" name="splash.png" optional="false">D:\Workspace\MatLAB\GCS\mainapp\for_testing\splash.png</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\Polyspace\R2021a</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
