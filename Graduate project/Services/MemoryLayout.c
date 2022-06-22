@@ -36,6 +36,14 @@ void FrameLoad(uint16_t numOfFrames)
 		// read all frames  -- > 256 frame
 		numOfFrames = size;
 	}
+	Frame_t * pFrameOut;
+	pFrameOut =  pvPortMalloc(sizeof(Frame_t));
+	FRAME_flush(pFrameOut);   // ensure it's ready
+	FRAME_put(pFrameOut , OBC_ADDRESS);     
+	FRAME_put(pFrameOut , ADCS_ADDRESS);    
+	FRAME_put(pFrameOut , 22);
+	FRAME_put(pFrameOut , numOfFrames);
+	xQueueSend(TransmittedFramesQueue,&pFrameOut,portMAX_DELAY);
 	uint8_t startindex = getIndexStart(numOfFrames);
 	for(uint16_t i = 0;i<numOfFrames;i++)
 	{

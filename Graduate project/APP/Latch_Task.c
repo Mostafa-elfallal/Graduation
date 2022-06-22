@@ -9,7 +9,8 @@ void vLatch_Task( void * pvParameters )
 		{
 			Frame_t * pLatchedFrame =  pvPortMalloc(sizeof(Frame_t));
 			*pLatchedFrame =   latchvar.LatchedFrame;
-			xQueueSend(ReceivedFramesQueue,&pLatchedFrame,portMAX_DELAY);
+			if(pLatchedFrame->data[2]!=22) // if not read log
+				xQueueSend(ReceivedFramesQueue,&pLatchedFrame,portMAX_DELAY);
 		}
 		xSemaphoreGive(latchvar.LatchMutex);
 		vTaskDelay(pdMS_TO_TICKS(LATCH_DELAYMS));

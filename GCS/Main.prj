@@ -1,0 +1,131 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration file="D:\Workspace\MatLAB\GCS\Main.prj" location="D:\Workspace\MatLAB\GCS" name="Main" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>Main</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>1.0</param.version>
+    <param.authnamewatermark />
+    <param.email />
+    <param.company />
+    <param.summary />
+    <param.description />
+    <param.screenshot>${PROJECT_ROOT}\download.png</param.screenshot>
+    <param.guid />
+    <param.installpath.string>\Main\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>D:\Workspace\MatLAB\app</param.intermediate>
+    <param.files.only>D:\Workspace\MatLAB\app</param.files.only>
+    <param.output>D:\Workspace\MatLAB\app</param.output>
+    <param.logdir>D:\Workspace\MatLAB\app</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>false</param.web.mcr>
+    <param.package.mcr>true</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text>Syntax 
+	  -? 
+	 
+ Input Arguments 
+	 -?  print help on how to use the application 
+	 input arguments</param.help.text>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.version />
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.summary />
+      <param.description />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.install.notes />
+      <param.target.install.notes />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\mainapp.mlapp</file>
+    </fileset.main>
+    <fileset.resources />
+    <fileset.package />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\Angleapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Gyroscopapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Gyroscope.png</file>
+      <file>${PROJECT_ROOT}\home.png</file>
+      <file>${PROJECT_ROOT}\Latch-close.png</file>
+      <file>${PROJECT_ROOT}\Latch-open.png</file>
+      <file>${PROJECT_ROOT}\Log.png</file>
+      <file>${PROJECT_ROOT}\Logapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Magneto.png</file>
+      <file>${PROJECT_ROOT}\Magnetometerapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Memory.png</file>
+      <file>${PROJECT_ROOT}\Memoryapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Motors.png</file>
+      <file>${PROJECT_ROOT}\Motorsapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Ping.png</file>
+      <file>${PROJECT_ROOT}\Process.m</file>
+      <file>${PROJECT_ROOT}\Simulator.png</file>
+      <file>${PROJECT_ROOT}\SunSensors.png</file>
+      <file>${PROJECT_ROOT}\Sunsensorsapp.mlapp</file>
+      <file>${PROJECT_ROOT}\Telemetry.png</file>
+      <file>${PROJECT_ROOT}\Temperature.png</file>
+      <file>${PROJECT_ROOT}\Temperatureapp.mlapp</file>
+      <file>${PROJECT_ROOT}\uifigureOnTop.m</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="D:\Workspace\MatLAB\app" name="Main.exe" optional="false">D:\Workspace\MatLAB\app\Main.exe</file>
+      <file location="D:\Workspace\MatLAB\app" name="readme.txt" optional="true">D:\Workspace\MatLAB\app\readme.txt</file>
+      <file location="D:\Workspace\MatLAB\app" name="splash.png" optional="false">D:\Workspace\MatLAB\app\splash.png</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\Polyspace\R2021a</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

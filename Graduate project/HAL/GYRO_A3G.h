@@ -38,4 +38,5 @@
 // But only if the AD0 pin is low.
 // Some sensor boards have AD0 high, and the
 // I2C address thus becomes 0xD1.
-#define A3G_I2C_ADDRESS 0b1101000
+#define A3G_I2C_ADDRESS 0x68
+#endif

@@ -134,6 +134,7 @@ void getTelemetryData(Frame_t * Framein , Frame_t * Frameout){
   getMagnetoData(Framein,Frameout);
   getTempData(Framein,Frameout);
   getSSData(Framein,Frameout);
+  getAngles(Framein,Frameout);
 }
 void changeMotors(Frame_t * Framein , Frame_t * Frameout){
 	TMR_setPWM(&(Framein->data[3]));

@@ -6,17 +6,33 @@
   ******************************************************************************
 */
 #include "Gyroscope.h"
-
+float test[3]={0};
+void GYRO_test(void)
+{
+	uint8_t reader[6] = {0};
+	for(int i =0;i<32;i++){
+		I2C_myRequest(I2C2,A3G_I2C_ADDRESS,A3G_OUT_X_L|0x80,reader,6);
+		test[0] += (float)((int16_t)((reader[1]<< 8) | reader[0])) * 0.00875f;
+		test[1] += (float)((int16_t)((reader[3]<< 8) | reader[2])) * 0.00875f;
+		test[2] += (float)((int16_t)((reader[5]<< 8) | reader[4])) * 0.00875f;
+	}
+	test[0]/=32;
+	test[1]/=32;
+	test[2]/=32;
+}
 void GYRO_init(void){
   
   
 #if  defined(A3G)
-  uint8_t buf[] = {A3G_CTRL_REG1 , 0xFF};
+  uint8_t buf[] = {A3G_CTRL_REG4 , 0x1 << 6};
   //max BW & data rate with enabling
+  //I2C_myTransmit(I2C2,A3G_I2C_ADDRESS,buf,2);
+  buf[0] = A3G_CTRL_REG1;
+  buf[1] = 0x0F;
   I2C_myTransmit(I2C2,A3G_I2C_ADDRESS,buf,2);
-  buf[0] = A3G_CTRL_REG3;
-  buf[0] = 0x10; //open drain
-  I2C_myTransmit(I2C2,MPU6050_I2C_ADDRESS,buf,2);
+  I2C_myRequest(I2C2,A3G_I2C_ADDRESS,A3G_CTRL_REG4,buf,1);
+  buf[1]=10;
+  GYRO_test();
 #elif defined(IAM)
   //don't need i think
 #elif defined(MPU6050)
@@ -31,10 +47,10 @@ void GYRO_init(void){
 void GYRO_Read(float *data){
   uint8_t reader[6] = {0};
 #if  defined(A3G)
-  I2C_myRequest(I2C2,A3G_I2C_ADDRESS,A3G_OUT_X_L,reader,6);
-  data[0] = (float)((int16_t)((reader[1]<< 8) | reader[0])) * 0.00875f;
-  data[1] = (float)((int16_t)((reader[3]<< 8) | reader[2])) * 0.00875f;
-  data[2] = (float)((int16_t)((reader[5]<< 8) | reader[4])) * 0.00875f;
+  I2C_myRequest(I2C2,A3G_I2C_ADDRESS,A3G_OUT_X_L|0x80,reader,6);
+  data[0] = (float)((int16_t)((reader[1]<< 8) | reader[0])) * 0.00875f - test[0];
+  data[1] = (float)((int16_t)((reader[3]<< 8) | reader[2])) * 0.00875f - test[1];
+  data[2] = (float)((int16_t)((reader[5]<< 8) | reader[4])) * 0.00875f - test[2];
 #elif defined(IAM)
   I2C_myRequest(I2C2,IAM_I2C_ADDRESS,IAM_XOUT_H,reader,6);
   data[0] = (float)((int16_t)((reader[0]<< 8) | reader[1])) / 131f ;

@@ -20,7 +20,7 @@ void vReceiver_Task( void * pvParameters )
 		FRAME_flush(pFrameOut);   // ensure it's ready
 		FRAME_put(pFrameOut , OBC_ADDRESS);     // put the dest
 		FRAME_put(pFrameOut , ADCS_ADDRESS);    // put the src
-		FRAME_put(pFrameOut , pFrame->data[TYPE]);   // put type but ping can change it
+		FRAME_put(pFrameOut , pFrame->data[TYPE]);   // put type 
 		if(! FRAME_lengthCheck(pFrame))
 		{
 			// frame is short
