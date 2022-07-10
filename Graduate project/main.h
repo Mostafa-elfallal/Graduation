@@ -27,18 +27,19 @@
 //HAL
 //#define LIS2
 //#define LIS3
-#define NO_MAGNETO
+#define USE_HMC
+//#define NO_MAGNETO
 
 //#define NO_GYRO
-#define A3G
+//#define A3G
 //#define IAM
-//#define MPU6050
+#define MPU6050
 
 //#define USE_MRAM
 //#define USE_FROM
 
-#define USE_TEMP
-//#define USE_TEMPMPU
+//#define USE_TEMP
+#define USE_TEMPMPU
 
 #include "Gyroscope.h"
 #include "magnetometer.h"

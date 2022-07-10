@@ -26,7 +26,7 @@ void APP_FLASHPins(void)
 
 void APP_TimerPins(void)
 {
-  GPIO_PinAFConfig(GPIOA, GPIO_PinSource0, GPIO_AF_TIM5);
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource0, GPIO_AF_TIM5);
   GPIO_PinAFConfig(GPIOA, GPIO_PinSource1, GPIO_AF_TIM5);
   GPIO_PinAFConfig(GPIOB, GPIO_PinSource0, GPIO_AF_TIM3);
   GPIO_PinAFConfig(GPIOB, GPIO_PinSource1, GPIO_AF_TIM3);
@@ -43,7 +43,7 @@ void APP_TimerPins(void)
   pin.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1;
   GPIO_Init(GPIOA, &pin);
   GPIO_Init(GPIOB, &pin);
-  TMR_myInit();
+  TMR_myInit(); 
 }
 void APP_clockRun(void)
 {
@@ -55,6 +55,7 @@ void APP_clockRun(void)
   RCC->AHB1ENR |= RCC_AHB1Periph_GPIOC;
   RCC->AHB1ENR |= RCC_AHB1Periph_GPIOD;
   RCC->AHB1ENR |= RCC_AHB1Periph_GPIOG;
+  RCC->AHB1ENR |= RCC_AHB1Periph_GPIOF;
   //UART
   RCC->APB2ENR |= RCC_APB2Periph_USART1;
   //I2C2
@@ -73,7 +74,7 @@ void APP_I2CPins(void)
   // Connect PB10 to  I2C2_SCL
   // Connect PB11 to  I2C2_SDA
   GPIO_PinAFConfig(GPIOB, GPIO_PinSource11, GPIO_AF_I2C2);
-  // Initialization of GPIOB
+  // Initialization of bGPIOB
   pins.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_11;
   pins.GPIO_Mode = GPIO_Mode_AF;
   pins.GPIO_Speed = GPIO_Fast_Speed;
@@ -124,6 +125,7 @@ void APP_ADCPins(void)
 {
   /*ADC pins*/
   /* PA2 PA3 PA7 PC4 PC5 */
+//don't connect PC5
   GPIO_InitTypeDef pins;
   pins.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_7;
   pins.GPIO_Mode = GPIO_Mode_AN;
@@ -163,7 +165,7 @@ void APP_UARTPins(void)
 void APP_init(void){
   APP_clockRun();
   APP_FLASHPins();
-  
+
   FLASH_init();
   
   //init leds
@@ -173,6 +175,10 @@ void APP_init(void){
   APP_UARTPins();
   // I2C
   APP_I2CPins();
+//    RCC_ClocksTypeDef x;
+//  RCC_GetClocksFreq(&x);
+//  uint8_t z=0;
+//  I2C_myTransmit(I2C2,0x48,&z,1);
   // TIMERS
   APP_TimerPins(); 
   //SPI 

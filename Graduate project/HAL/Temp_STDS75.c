@@ -11,7 +11,7 @@
   ******************************************************************************
 */
 #include "Temp_STDS75.h"
-
+extern float Gyro_temp;
 #if defined(USE_TEMP )
 static TempSensor_t sensor = {
     .resBits = Res_12bits,
@@ -43,10 +43,7 @@ float Temp_Read(void)
   float temp = (((float)((data[0]<<8 | data[1])>>sensor.shiftBits))) * (sensor.res) ;
   return temp;
 #elif defined(USE_TEMPMPU )
-	uint8_t data[2] = {0};
-	I2C_myRequest(I2C2 , MPU6050_I2C_ADDRESS , MPU6050_TEMP_OUT_H , data , 2);
-	float temp = ((float)(data[0]<<8 | data[1]))/340.00-147.0 ;
-	return temp;
+	return  Gyro_temp;
 #else
   return 37.5;
 #endif

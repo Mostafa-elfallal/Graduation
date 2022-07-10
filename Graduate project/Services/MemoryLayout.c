@@ -42,7 +42,7 @@ void FrameLoad(uint16_t numOfFrames)
 	FRAME_put(pFrameOut , OBC_ADDRESS);     
 	FRAME_put(pFrameOut , ADCS_ADDRESS);    
 	FRAME_put(pFrameOut , 22);
-	FRAME_put(pFrameOut , numOfFrames);
+	FRAME_put(pFrameOut , numOfFrames-1);
 	xQueueSend(TransmittedFramesQueue,&pFrameOut,portMAX_DELAY);
 	uint8_t startindex = getIndexStart(numOfFrames);
 	for(uint16_t i = 0;i<numOfFrames;i++)

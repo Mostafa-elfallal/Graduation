@@ -12,6 +12,8 @@
 #include "MAGNETO_LIS2.h"
 #elif defined(LIS3)
 #include "MAGNETO_LIS3.h"
+#elif defined(USE_HMC)
+#include "MAGNETO_HMC.h"
 #elif defined(NO_MAGNETO)
 
 #else 

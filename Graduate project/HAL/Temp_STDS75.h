@@ -13,7 +13,7 @@
 #ifndef __Temp_sens_H
 #define __Temp_sens_H
 #include "main.h"
-
+#define MPU6050_I2C_ADDRESS 0x68
 typedef enum {
     Res_9bits   = 0,  //150ms     // 0.5 C
     Res_10bits  = (1<<5), //300 ms     // 0.25 C

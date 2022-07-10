@@ -95,10 +95,18 @@
 #define MPU6050_FIFO_COUNTL        0x73   // R/W
 #define MPU6050_FIFO_R_W           0x74   // R/W
 #define MPU6050_WHO_AM_I           0x75   // R
+
+#define MPU66050_DEFAULT_GYRO_COEFF 		0.98
+#define MPU66050_CALIB_OFFSET_NB_MES   	500
+
 // Default I2C address for the MPU-6050 is 0x68.
 // But only if the AD0 pin is low.
 // Some sensor boards have AD0 high, and the
 // I2C address thus becomes 0xD1.
 #define MPU6050_I2C_ADDRESS 0x68
-    
+
+#define MPU6050_gyro_lsb_to_degsec 131.0
+#define MPU6050_acc_lsb_to_g  16384.0
+#define RAD_2_DEG             57.29578
+void Gyro_getAngles(float *angles);
 #endif

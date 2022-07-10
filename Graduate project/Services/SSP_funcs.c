@@ -125,7 +125,7 @@ void getSSData(Frame_t * Framein , Frame_t * Frameout){
   }
 */
 	xSemaphoreTake(SensorsData.DataMutex,portMAX_DELAY);
-	for( uint8_t i = 0 ; i < 5 ; i++)
+	for( uint8_t i = 0 ; i < 4 ; i++)
 		queuefloat(Frameout , (uint8_t *)&(SensorsData.SS[i]) );
 	xSemaphoreGive( SensorsData.DataMutex);
 }

@@ -1,13 +1,13 @@
 #include "TMR.h"
 #include "RCC.h"
-
+#include "GPIO.h"
 #define MOTOR1  0x01
 #define MOTOR2  0x02
 #define MOTOR3  0x03
 #define PERIOD_TICKS 8399
 void TMR_setPWM(uint8_t *motors)
 {
-	// three motors 
+		// three motors 
 	/*    1 at A0 & A1        TIM5
 	2 at B0 & B1        TIM3
 	3 at D12 & D13      TIM4
@@ -67,10 +67,11 @@ void TMR_setPWM(uint8_t *motors)
 		TIM4->CCR2 = (((PERIOD_TICKS + 1)*speed[2])/100);
 	}
 	TIM4->CCMR1 |= (TIM_OCPreload_Enable | (TIM_OCPreload_Enable<<8));
+	
 }
 void TMR_myInit(void)
 {
-  TIM3->ARR = PERIOD_TICKS ;/* 10kHz PWM */
+	TIM3->ARR = PERIOD_TICKS ;/* 10kHz PWM */
   TIM3->PSC = 0; 
   TIM3->EGR = TIM_PSCReloadMode_Immediate;
   TIM4->ARR = PERIOD_TICKS ;
@@ -108,4 +109,4 @@ void TMR_myInit(void)
   TIM5->CCER |= (TIM_OCPolarity_Low | (TIM_OCPolarity_Low<<4) |
                  TIM_OutputState_Enable |(TIM_OutputState_Enable << 4));
   TIM5->CCMR1 |= (TIM_OCPreload_Enable | (uint16_t)(TIM_OCPreload_Enable << 8));
-}
+  }
