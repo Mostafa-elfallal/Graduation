@@ -6,11 +6,11 @@ function [frame,status] = Process(array,dir)
     frame = []; % init
     if dir == "in"  % we are the receiver
         fescindeces  = find(array == 0xdb); % get the indeces of all FESC chars
-        fescTindeces = fescindeces(find(array(fescindeces+1) == 0xdb | array(fescindeces+1) == 0xdd)); %#ok<FNDSB> 
+        fescTindeces = fescindeces(find(array(fescindeces+1) == 0xdd | array(fescindeces+1) == 0xdc)); %#ok<FNDSB> 
         % get the indeces of FESCs that is followed by FESC or 0xDD ,
         % because we want to discard the second FESC in case of FESCTFESC
         for i=1:length(fescTindeces)    % go along the indeces
-            if array(fescTindeces(i)+1) == 0xdb
+            if array(fescTindeces(i)+1) == 0xdd
             	array(fescTindeces(i) ) =[];    % FESCTFESC remove the first FESC
             else
                 array(fescTindeces(i)+1 ) =0xc0;% FESCTFEND remove the first FESC and replace the 0xdd into FEND
@@ -38,9 +38,9 @@ function [frame,status] = Process(array,dir)
         for i=2:length(indeces) 
             if array(indeces(i)) == 0xc0
               
-                frame = [frame array(indeces(i-1)+1:indeces(i)-1) 0xdb 0xdd]; %#ok<AGROW>
+                frame = [frame array(indeces(i-1)+1:indeces(i)-1) 0xdb 0xdc]; %#ok<AGROW>
             else
-                frame = [frame array(indeces(i-1)+1:indeces(i)-1) 0xdb 0xdb]; %#ok<AGROW>
+                frame = [frame array(indeces(i-1)+1:indeces(i)-1) 0xdb 0xdd]; %#ok<AGROW>
             end
         end
         frame = [0xc0 frame array(indeces(end)+1:end) 0xc0];

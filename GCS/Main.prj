@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration file="D:\Workspace\MatLAB\GCS\Main.prj" location="D:\Workspace\MatLAB\GCS" name="Main" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration file="D:\Workspace\MatLAB\GCS - Panels\Main.prj" location="D:\Workspace\MatLAB\GCS - Panels" name="Main" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>Main</param.appname>
     <param.icon />
     <param.icons />
@@ -16,10 +16,10 @@
     <param.logo />
     <param.install.notes />
     <param.target.install.notes />
-    <param.intermediate>D:\Workspace\MatLAB\app</param.intermediate>
-    <param.files.only>D:\Workspace\MatLAB\app</param.files.only>
-    <param.output>D:\Workspace\MatLAB\app</param.output>
-    <param.logdir>D:\Workspace\MatLAB\app</param.logdir>
+    <param.intermediate>D:\Workspace\MatLAB\app\panels version</param.intermediate>
+    <param.files.only>D:\Workspace\MatLAB\app\panels version</param.files.only>
+    <param.output>D:\Workspace\MatLAB\app\panels version</param.output>
+    <param.logdir>D:\Workspace\MatLAB\app\panels version</param.logdir>
     <param.enable.clean.build>false</param.enable.clean.build>
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
@@ -28,7 +28,7 @@
     <param.package.mcr>true</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
     <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
-    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.package.mcr.name>team#</param.package.mcr.name>
     <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
     <param.windows.command.prompt>true</param.windows.command.prompt>
     <param.create.log>false</param.create.log>
@@ -63,7 +63,6 @@
       <param.support.packages />
       <param.no.mcr />
       <param.web.mcr.name />
-      <param.package.mcr.name />
       <param.no.mcr.name />
       <param.windows.command.prompt />
       <param.create.log />
@@ -78,34 +77,28 @@
     <fileset.resources />
     <fileset.package />
     <fileset.depfun>
-      <file>${PROJECT_ROOT}\Angleapp.mlapp</file>
-      <file>${PROJECT_ROOT}\Gyroscopapp.mlapp</file>
+      <file>${PROJECT_ROOT}\connection.png</file>
+      <file>${PROJECT_ROOT}\get tel.png</file>
       <file>${PROJECT_ROOT}\Gyroscope.png</file>
       <file>${PROJECT_ROOT}\home.png</file>
+      <file>${PROJECT_ROOT}\image-removebg-preview.png</file>
       <file>${PROJECT_ROOT}\Latch-close.png</file>
       <file>${PROJECT_ROOT}\Latch-open.png</file>
       <file>${PROJECT_ROOT}\Log.png</file>
-      <file>${PROJECT_ROOT}\Logapp.mlapp</file>
       <file>${PROJECT_ROOT}\Magneto.png</file>
-      <file>${PROJECT_ROOT}\Magnetometerapp.mlapp</file>
       <file>${PROJECT_ROOT}\Memory.png</file>
-      <file>${PROJECT_ROOT}\Memoryapp.mlapp</file>
       <file>${PROJECT_ROOT}\Motors.png</file>
-      <file>${PROJECT_ROOT}\Motorsapp.mlapp</file>
       <file>${PROJECT_ROOT}\Ping.png</file>
       <file>${PROJECT_ROOT}\Process.m</file>
       <file>${PROJECT_ROOT}\Simulator.png</file>
       <file>${PROJECT_ROOT}\SunSensors.png</file>
-      <file>${PROJECT_ROOT}\Sunsensorsapp.mlapp</file>
       <file>${PROJECT_ROOT}\Telemetry.png</file>
       <file>${PROJECT_ROOT}\Temperature.png</file>
-      <file>${PROJECT_ROOT}\Temperatureapp.mlapp</file>
-      <file>${PROJECT_ROOT}\uifigureOnTop.m</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="D:\Workspace\MatLAB\app" name="Main.exe" optional="false">D:\Workspace\MatLAB\app\Main.exe</file>
-      <file location="D:\Workspace\MatLAB\app" name="readme.txt" optional="true">D:\Workspace\MatLAB\app\readme.txt</file>
-      <file location="D:\Workspace\MatLAB\app" name="splash.png" optional="false">D:\Workspace\MatLAB\app\splash.png</file>
+      <file location="D:\Workspace\MatLAB\app\panels version" name="Main.exe" optional="false">D:\Workspace\MatLAB\app\panels version\Main.exe</file>
+      <file location="D:\Workspace\MatLAB\app\panels version" name="splash.png" optional="false">D:\Workspace\MatLAB\app\panels version\splash.png</file>
+      <file location="D:\Workspace\MatLAB\app\panels version" name="readme.txt" optional="true">D:\Workspace\MatLAB\app\panels version\readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>
